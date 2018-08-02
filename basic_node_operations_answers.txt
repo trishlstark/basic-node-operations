@@ -1,0 +1,21 @@
+1. Running sort on commands.js returned the contents of the file in alphabetical order. It put lines with tab spaces at the beginning.
+WC run on commands.js returned "44  115  1095 commands.js" this is the newline, word, and byte count for this file.
+Uniq returned only different lines. It will not return a line if it is the same as the one above it.
+
+
+2. 'head commands.js | wc' returned '10 21 208' 
+This is because head by default returns the first 10 lines of the file. Connecting this command with wc returned the lines, words, and byte count for those first ten lines.
+
+
+6.
+
+function reverseString(inputString) {
+  splitString = inputString.split(" ");
+  revString = [];
+  
+  splitString.forEach((word) => {
+    revString.push(word.split('').reverse().join(''));
+  });
+  
+  return revString.join(" ");
+}
